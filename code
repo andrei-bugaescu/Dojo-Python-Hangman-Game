@@ -1,0 +1,56 @@
+import time
+from os import system, name
+from list_of_words import words_list
+from random import choice
+
+
+print("\nWelcome to Hangman game by IT SOURCODE\n")
+name
+
+
+
+from hangman_functions  import *
+# loading_game()
+
+
+
+
+list_letter = []
+tempt=11
+
+#while tempt>0:
+solution = word_selection(words_list)
+len_word = word_length(solution)
+current_guess = word_shape() * len_word
+list_guessed = list(current_guess)
+letter_found = ""
+#    if letter.isalpha() :
+#        if letter in solution and letter not in list_letter :
+print(solution)
+print(list_guessed)
+
+letter = 'a'
+while tempt > 0:
+    letter = input('Enter a letter').upper()
+    if letter.isalpha() == False or letter in list_letter or len(letter)>1 :
+        print("Incorrect input")
+        continue
+    else:
+        print(list_letter.append(letter))
+        for index,value in enumerate(list(solution)) :
+            if value == letter :
+                list_guessed[index] == letter
+                
+                
+                
+                
+                
+                
+import re
+mot = "histoire"
+pattern = "i"
+
+matches = re.finditer(pattern, mot)
+for match in matches:
+    print(match) 
+    print(match.start())               
